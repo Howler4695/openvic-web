@@ -1,0 +1,19 @@
+{
+  "name": "openvic2-web",
+  "version": "1.0.0",
+  "description": "monorepo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Howler4695/openvic2-web.git"
+  },
+  "author": "hwl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Howler4695/openvic2-web/issues"
+  },
+  "homepage": "https://github.com/Howler4695/openvic2-web#readme"
+}
