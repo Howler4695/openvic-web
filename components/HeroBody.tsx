@@ -1,6 +1,7 @@
 import React, { FC, PropsWithChildren } from "react";
 import HeroHeader from "./HeroHeader";
 import Image from "next/image";
+import { BrowserRouter } from "react-router-dom";
 
 interface HeroBodyProps {
   children?: any;
