@@ -1,5 +1,4 @@
 import React, { FC, PropsWithChildren } from "react";
-import { useMedia } from "react-use";
 import HeroHeader from "./HeroHeader";
 import Image from "next/image";
 
@@ -9,25 +8,11 @@ interface HeroBodyProps {
 
 const HeroBody: FC<HeroBodyProps> = ({}) => {
   // const minimumHeight = calc(100vh - 70px - 2em)
-  const isSmallScreen = useMedia(`(max-width: md)`);
 
   return (
-    <div
-      style={{
-        background: "white",
-        display: "flex",
-        width: "100%",
-        borderRadius: "50px",
-        margin: "70px 350px 70px 350px",
-      }}
-    >
+    <div className="flex flex-col bg-gray-100 w-full mx-4 rounded-[40px] my-12  md:mx-12 lg:mx-32 xl:mx-60 overflow-y-hidden">
       <HeroHeader />
-      <div
-        style={{
-          backgroundImage: "url('/terrain-map-4-5-23.png')",
-          position: "relative",
-        }}
-      ></div>
+      <div className=" flex h-full rounded-[40px] mx-2 mb-2  bg-gray-300 xl:mx-4 xl:mb-4"></div>
     </div>
   );
 };
