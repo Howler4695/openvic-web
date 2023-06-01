@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "lint": "npx eslint pages/** components/**",
+    "lintfix": "npx eslint --fix pages/** components/**",
     "build": "next build",
     "start": "next start"
   },
