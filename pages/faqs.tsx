@@ -59,7 +59,7 @@ const FAQS: FAQs = [
 
 export default function Home() {
   const [questionAnswer, setQuestionAnswer] = useState<
-    string | (() => JSX.Element) | ReactNode
+    string | (() => JSX.Element)
   >("");
 
   const createFAQ = (FAQs: FAQs) => {
