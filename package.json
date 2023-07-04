@@ -15,12 +15,13 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
+    "next": "^13.4.8",
     "prettier": "^2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.11.2",
     "react-use": "^17.4.0",
+    "tailwind-scrollbar": "^3.0.4",
     "typescript": "5.0.4"
   },
   "devDependencies": {

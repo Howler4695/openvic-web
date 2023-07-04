@@ -3,13 +3,13 @@ import { Inter } from "next/font/google";
 import Page from "@/components/Page";
 import HeroBody from "@/components/HeroBody";
 import Link from "next/link";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useMemo } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 type FAQ = {
   question: string;
-  answer: string | (() => JSX.Element);
+  answer: string | JSX.Element;
 };
 type FAQs = [...FAQ[]];
 
@@ -44,7 +44,7 @@ const FAQS: FAQs = [
   },
   {
     question: "What Can I Do To Help?",
-    answer: () => (
+    answer: (
       <>
         See <Link href="/contribute">here</Link>
       </>
@@ -58,24 +58,31 @@ const FAQS: FAQs = [
 ];
 
 export default function Home() {
-  const [questionAnswer, setQuestionAnswer] = useState<
-    string | (() => JSX.Element)
-  >("");
+  const [questionAnswer, setQuestionAnswer] = useState<FAQ["answer"]>("");
 
-  const createFAQ = (FAQs: FAQs) => {
-    return FAQs?.map((faq) => {
-      <button onClick={() => setQuestionAnswer(faq.answer)}>
+  const createFAQs = (FAQs: FAQs) =>
+    FAQs.map((faq, index) => (
+      <button
+        key={`FAQ-${index}`}
+        onClick={() => setQuestionAnswer(faq.answer)}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded"
+      >
         {faq.question}
-      </button>;
-    });
-  };
+      </button>
+    ));
+
+  const allFAQs = createFAQs(FAQS);
 
   return (
     <Page>
       <HeroBody>
-        <div className="flex flex-col">
-          <div className="flex">{questionAnswer}</div>
-          <div className="flex flex-col">{}</div>
+        <div className="w-full">
+          <div className="flex h-20">
+            <text className="text-center">{questionAnswer}</text>
+          </div>
+          <div className="flex flex-col justify-center">
+            <>{allFAQs}</>
+          </div>
         </div>
       </HeroBody>
     </Page>

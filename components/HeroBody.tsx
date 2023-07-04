@@ -19,7 +19,7 @@ const HeroBody: FC<PropsWithChildren<HeroBodyProps>> = ({
     <div
       className={
         className ??
-        "flex flex-col bg-gray-100 w-full mx-4 rounded-[40px] my-12  md:mx-12 lg:mx-32 xl:mx-60 overflow-y-hidden"
+        "flex flex-col bg-gray-100 w-full mx-4 rounded-[40px] my-12  md:mx-12 lg:mx-32 xl:mx-60 overflow-y-auto scrollbar-thin"
       }
     >
       <HeroHeader />

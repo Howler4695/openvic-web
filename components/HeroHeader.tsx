@@ -15,7 +15,7 @@ const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
     <div
       className={
         className ??
-        "flex w-full justify-between px-10 py-4 items-center h-28 relative"
+        "flex w-full justify-between px-10 py-4 items-center h-28 relative min-h-[102px]"
       }
     >
       <div className="flex">
@@ -48,10 +48,11 @@ const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
         <Link href="/" className="fill-black hover:fill-red-900">
           <Image
             src="/ov.svg"
-            alt=""
+            alt="OpenVic Logo"
             height={80}
             width={80}
             className="invert"
+            loading="lazy"
           />
         </Link>
       </div>
