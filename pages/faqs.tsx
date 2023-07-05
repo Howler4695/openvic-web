@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
+import { useState } from "react";
+import Link from "next/link";
 import Page from "@/components/Page";
 import HeroBody from "@/components/HeroBody";
-import Link from "next/link";
-import { ReactNode, useState, useMemo } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren } from "react";
+import React, { FC } from "react";
 import { useMedia } from "react-use";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,6 @@ interface HeroHeaderProps {
 }
 
 const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
-  // const minimumHeight = calc(100vh - 70px - 2em)
   const isSmallScreen = useMedia(`(max-width: md)`);
 
   return (
