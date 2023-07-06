@@ -63,7 +63,9 @@ export default function Home() {
     FAQs.map((faq, index) => (
       <button
         key={`FAQ-${index}`}
-        onClick={() => setQuestionAnswer(faq.answer)}
+        onClick={() => {
+          setQuestionAnswer(faq.answer);
+        }}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded"
       >
         {faq.question}

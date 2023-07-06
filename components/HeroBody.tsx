@@ -1,11 +1,11 @@
-import React, { FC, PropsWithChildren } from "react";
+import React, { type FC, type PropsWithChildren } from "react";
 import HeroHeader from "./HeroHeader";
 
-interface HeroBodyProps {
+type HeroBodyProps = {
   className?: string;
   contentBackground?: string;
   children?: any;
-}
+};
 
 const HeroBody: FC<PropsWithChildren<HeroBodyProps>> = ({
   className,

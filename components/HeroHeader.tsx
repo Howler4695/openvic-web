@@ -1,14 +1,14 @@
-import React, { FC } from "react";
+import React, { type FC } from "react";
 import { useMedia } from "react-use";
 import Image from "next/image";
 import Link from "next/link";
 
-interface HeroHeaderProps {
+type HeroHeaderProps = {
   className?: string;
-}
+};
 
 const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
-  const isSmallScreen = useMedia(`(max-width: md)`);
+  const isSmallScreen = useMedia("(max-width: md)");
 
   return (
     <div
