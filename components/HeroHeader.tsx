@@ -45,13 +45,7 @@ const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
       </div>
       <div className="absolute left-1/2 -translate-x-1/2">
         <Link href="/" className="fill-black hover:fill-red-900">
-          <Image
-            src="/ov.svg"
-            alt="OpenVic Logo"
-            height={80}
-            width={80}
-            className="invert"
-          />
+          <Image src="/logo.svg" alt="OpenVic Logo" height={80} width={80} />
         </Link>
       </div>
       <div className="flex">
