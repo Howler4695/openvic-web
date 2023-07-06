@@ -2,12 +2,13 @@ import React, { type FC } from "react";
 import { useMedia } from "react-use";
 import Image from "next/image";
 import Link from "next/link";
+import { block } from "million/react";
 
 type HeroHeaderProps = {
   className?: string;
 };
 
-const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
+const HeroHeader: FC<HeroHeaderProps> = block(({ className }) => {
   const isSmallScreen = useMedia("(max-width: md)");
 
   return (
@@ -58,6 +59,6 @@ const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
       </div>
     </div>
   );
-};
+});
 
 export default HeroHeader;
