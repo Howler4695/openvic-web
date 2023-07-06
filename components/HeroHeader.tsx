@@ -51,7 +51,6 @@ const HeroHeader: FC<HeroHeaderProps> = ({ className }) => {
             height={80}
             width={80}
             className="invert"
-            loading="lazy"
           />
         </Link>
       </div>
